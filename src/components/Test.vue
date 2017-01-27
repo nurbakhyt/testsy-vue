@@ -29,8 +29,10 @@
       v-on:onSelect="addAnswer"
       :key="test.id">
     </test-card>
-    <div v-if="access && error && !lecture" class="btn">
-      <md-button @click="getResult" class="md-raised md-accent">Узнать результат</md-button>
+    <div v-if="access && !lecture && !error" class="btn">
+      <md-button @click="getResult" class="md-raised md-accent">
+        Узнать результат
+      </md-button>
     </div>
 
     <div v-if="access && !error && lecture" class="btn">
